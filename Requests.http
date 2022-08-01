@@ -1,0 +1,16 @@
+@host=http://localhost:5000/api
+
+###
+
+POST {{host}}/cache
+Content-Type: application/json
+
+{
+  "key": "fullName",
+  "value": "{\"firstName\": \"Pavan\", \"lastName\": \"Singh\"}",
+  "expirationInSeconds": 100
+}
+
+###
+
+GET {{host}}/cache/hello
